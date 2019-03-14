@@ -1,9 +1,9 @@
-#The Road to Mastery
+# The Road to Mastery
 
 A simple calculator for achieving 10,000 hours of practice.
 
 
-##About
+## About
 
 This timeline chart is intended to give you a general sense of the time it takes to 
 master a skill. There are assumptions built in:
