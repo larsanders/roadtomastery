@@ -1,90 +1,73 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
   <title>The Road To Mastery</title>
-  <style>
-    body {
-      font-family: times, Times New Roman, times-roman, georgia, serif;
-      font-size: 20px;
-      line-height: 24px;
-      color: #444;
-    }
-    h2 {
-      font-size: 38px;
-      line-height: 40px;
-      letter-spacing: -1px;
-      margin: 0 0 20 0;
-      padding: 0 0 0 0;
-      font-weight: 100;
-      text-transform: uppercase;
-    }
-    select {
-      font-size: 18px;
-    }
-    #inputContainer, #birthYearDiv {
-      text-transform: uppercase;
-    }
-    #narrative {
-      font-size: 16px;
-      background-color: #f0f8ff;
-      border: 1px solid #444;
-      padding: 10px;
-    }
-    #timeline {
-      margin: 10px 0px;
-    }
-    #timelineContainer {
-      margin: 20px 0px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 
 <body>
-<div id="headline">
-  <h2>How long does it take to become a master?</h2>
-</div>
-<div id="inputContainer">
-  If I practice 
-  <select name="hoursSelect" id="hoursSelect"></select>
-  hour<span id="hourPlural"></span> a day, 
+<div id="container" class="container-fluid">
+  <div id="headline" class="row">
+    <div class="col">
+      <h2 class="display-4">How long is 10,000 hours?</h2>
+    </div>
+  </div>
 
-  <select name="daysSelect" id="daysSelect"></select>
-  day<span id="dayPlural"></span> a week, it will take
+  <div id="inputContainer" class="row h5">
+    <div class="col">
+      If I practice 
+      <select name="hoursSelect" id="hoursSelect"></select> 
+      hour<span id="hourPlural"></span>&nbsp;a day, 
+
+      <select name="daysSelect" id="daysSelect"></select>
+      day<span id="dayPlural"></span>&nbsp;a week, it will take <br/>
+    </div>
+  </div>
+
+  <div class="row h5">
+    <div id="resultsDiv" class="col font-weight-bold"></div>
+  </div>
+
+  <div id="timelineContainer" class="row mt-4">
+    <div class="col">
+      Birth year: <select name="birthYearSelect" id="birthYearSelect"></select>
+    </div>
+  </div>
   
-  <div id="resultsDiv">
+  <div class="row">
+    <div id="timeline" class="col mt-1">
   </div>
-</div>
-<div id="timelineContainer">
-  <div id="birthYearDiv">
-    Birth year: <select name="birthYearSelect" id="birthYearSelect"></select>
-  </div>
-  <div id="timeline"></div>
-</div>
-<div id="narrative">
-  <p>This chart is intended to give you a <em>general sense</em> of the time it 
-takes to master a skill. There are assumptions built in:
-  </p>
-  <ul>
-    <li>Mastery requires 10,000 hours of practice</li>
-    <li>You practice all 52 weeks of the year</li>
-    <li>Average lifespan is 80 years</li>
-    <li>You choose a skill for which you have natural aptitude</li>
-    <li>Your practice is voluntary and progressively more challenging</li>
-  </ul>
+  
+  <div id="narrative" class="alert alert-info" role="alert">
+    <p>Adjust the hours per day, days per week, and birth year to generate your timeline.</p>
+    <p>This interactive chart is intended to give you a <em>general sense</em> of the time it 
+       takes to master a skill. There are assumptions built in:
+    </p>
+    <ul>
+      <li>Mastery requires 10,000 hours of practice</li>
+      <li>You practice all 52 weeks of the year</li>
+      <li>Average lifespan is 80 years</li>
+      <li>You choose a skill for which you have natural aptitude</li>
+      <li>Your practice is voluntary and progressively more challenging</li>
+    </ul>
 
-  <p>The 10,000 hours concept came from 
-<a href="https://psycnet.apa.org/buy/1993-40718-001" target="_blank">a 1993 study</a> 
+    <p>The 10,000 hours concept came from 
+<a href="https://psycnet.apa.org/buy/1993-40718-001" class="alert-link" target="_blank">a 1993 study</a> 
 and was later popularized by Malcolm Gladwell in 
-<a href="https://en.wikipedia.org/wiki/Outliers_(book)" target="_blank">his book Outliers</a>, 
+<a href="https://en.wikipedia.org/wiki/Outliers_(book)" class="alert-link" target="_blank">his book Outliers</a>, 
 but is just one part of the 
-<a href="https://www.fastcompany.com/3027564/scientists-debunk-the-myth-that-10000-hours-of-practice-makes-you-an-expert" target="_blank">ongoing dialogue</a> 
+<a href="https://www.fastcompany.com/3027564/scientists-debunk-the-myth-that-10000-hours-of-practice-makes-you-an-expert" class="alert-link" target="_blank">ongoing dialogue</a> 
 about expertise. A 
-<a href="https://www.sciencedirect.com/science/article/pii/S0160289613000421" target="_blank">recent study</a> 
+<a href="https://www.sciencedirect.com/science/article/pii/S0160289613000421" class="alert-link" target="_blank">recent study</a> 
 showed that some individuals can reach elite levels of performance with fewer hours of practice, 
 while others require more hours or never attain mastery if they do not have the 
 aptitude for that specific skill. 
-  </p>
+    </p>
+  </div>
+  
 </div>
 
 <script>
